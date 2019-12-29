@@ -3,7 +3,7 @@ onLoadIntro = "Defend yourself";
 onLoadName = "dynamicBulwarks";
 briefingName = "dynamicBulwarks";
 overviewText = "Survive by scavenging equipment, in a randomly selected city, against ever increasing waves of hostiles.";
-author = "Hilltop & omNomios";
+author = "m33b (forked from omNomios)";
 overviewPicture = "preview.paa";
 
 loadScreen = "preview.paa";
@@ -222,7 +222,7 @@ class Params
 		title = "Dead bodies remain for how many waves (dead bodies impact perfomance)";
 		values[] = {0, 1, 2};
 		texts[] = {"0 (until next round begins)", "1", "2"};
-		default = 0;
+		default = 2;
 	};
 
 	class DOWN_TIME
@@ -294,7 +294,7 @@ class Params
 		title = "Randomize Hostile Weapons";
 		values[] = {"true", "false"};
 		texts[] = {"Yes", "No"};
-		default = "No";
+		default = "true";
 	};
 
 	class HUD_POINT_HITMARKERS
@@ -358,7 +358,7 @@ class Params
 		title = "Loot distribution";
 		values[] = {1, 2, 3, 4};
 		texts[] = {"Every building", "Every second building", "Every third building", "Every fourth building"};
-		default = 2;
+		default = 1;
 	};
 
 	class LOOT_ROOM_DISTRIBUTION
@@ -430,7 +430,7 @@ class Params
 		title = "Points per kill";
 		values[] = {10, 50, 100, 150, 200, 300};
 		texts[] = {"10","50","100","150","200","300"};
-		default = 100;
+		default = 200;
 	};
 
 	class SCORE_HIT
@@ -438,7 +438,7 @@ class Params
 		title = "Points per hit";
 		values[] = {0, 10, 20, 50, 100};
 		texts[] = {"0","10","20","50","100"};
-		default = 20;
+		default = 50;
 	};
 
 	class SCORE_DAMAGE_BASE
@@ -488,7 +488,7 @@ class Params
 			"Medikit",
 			"First Aid Kit / Medikit"
 		};
-		default = 2;
+		default = 0;
 		function = "bis_fnc_paramReviveRequiredItems";
 	};
 
@@ -510,7 +510,7 @@ class Params
 
 	class TEAM_DAMAGE
 	{
-		title = "Freindly Fire";
+		title = "Friendly Fire";
 		values[] = {0, 1};
 		texts[] = {"Off", "On"};
 		default = 1;
