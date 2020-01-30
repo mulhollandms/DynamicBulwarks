@@ -3,9 +3,11 @@ _caller = _this select 1;
 _action = _this select 2;
 
 _objectPos = getPosATL (_object);
+_objectDir = getDir (_object);
 detach _object;
 [_object, false] remoteExec ["enableSimulation", 0];
 [_object, _objectPos] remoteExec ["setPosATL", 0];
+[_object, _objectDir] remoteExec ["setDir", 0];
 [_object, true] remoteExec ["enableSimulation", 0];
 
 {

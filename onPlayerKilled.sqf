@@ -1,3 +1,4 @@
+waitUntil {!isNil "bulwarkBox"};
 _player = _this select 0;
 _buildPhase = bulwarkBox getVariable ["buildPhase", true];
 

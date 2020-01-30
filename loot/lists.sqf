@@ -21,9 +21,12 @@ _glasses = [];
 _faces = [];
 _grenades = [];
 _charges = [];
-_count =  count (configFile >> "CfgWeapons");
+_weapons = "(getText(_x>>'DLC')!='Enoch')" configClasses (configFile >> "CfgWeapons");
+_count = count (_weapons);
+// _count =  count (configFile >> "CfgWeapons");
 for "_x" from 0 to (_count-1) do {
-	_weap = ((configFile >> "CfgWeapons") select _x);
+	// _weap = ((configFile >> "CfgWeapons") select _x);
+	_weap = (_weapons select _x);
 	if (isClass _weap) then {
 		if (getnumber (_weap >> "scope") == 2) then {
 			if (isClass (_weap >> "ItemInfo")) then {
@@ -61,17 +64,19 @@ for "_x" from 0 to (_count-1) do {
   };
 };
 
-_count =  count (configFile >> "CfgVehicles");
-for "_x" from 0 to (_count-1) do {
-    _item=((configFile >> "CfgVehicles") select _x);
-    if (isClass _item) then {
-        if (getnumber (_item >> "scope") == 2) then {
-            if (gettext (_item >> "vehicleClass") == "Backpacks") then {
-                _backpacks = _backpacks + [configname _item]
-            };
-        };
-    };
-};
+_backpacks_cfg = "((getNumber(_x>>'scope')==2)&&(getText(_x>>'vehicleClass')=='Backpacks')&&(getText(_x>>'DLC')!='Enoch')&&(getText(_x>>'editorSubcategory')!='EdSubcat_DismantledWeapons'))" configClasses (configFile >> "CfgVehicles");
+{_backpacks pushBack (configName _x);} forEach _backpacks_cfg;
+// _count =  count (configFile >> "CfgVehicles");
+// for "_x" from 0 to (_count-1) do {
+//     _item=((configFile >> "CfgVehicles") select _x);
+//     if (isClass _item) then {
+//         if (getnumber (_item >> "scope") == 2) then {
+//             if (gettext (_item >> "vehicleClass") == "Backpacks") then {
+//                 _backpacks = _backpacks + [configname _item]
+//             };
+//         };
+//     };
+// };
 
 _count =  count (configFile >> "CfgGlasses");
 for "_x" from 0 to (_count-1) do {
