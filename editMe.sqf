@@ -119,11 +119,16 @@ BULWARK_BUILDITEMS = [
     [75,   "Small Ramp (1m)",      "Land_Obstacle_Ramp_F",            180, 1.5],
     [85,   "Flat Triangle (1m)",   "Land_DomeDebris_01_hex_green_F",  180, 1.5],
     [100,  "Short Sandbag Wall",   "Land_SandbagBarricade_01_half_F",   0, 1.5],
+    [100,  "Sandbag Barricade (short)",    "Land_SandbagBarricade_01_half_F",   0, 1.5],
+    [100,  "Dragon's Teeth",    "Land_DragonsTeeth_01_4x2_old_F",   0, 4],
     [150,  "Sandbag Barricade",    "Land_SandbagBarricade_01_hole_F",   0, 1.5],
+    [150,  "Barbed Wire",          "wire",   0, 1.5],
     [180,  "Concrete Shelter",     "Land_CncShelter_F",                 0,   1],
     [200,  "Concrete Walkway",     "Land_GH_Platform_F",                0, 3.5],
     [250,  "Tall Concrete Wall",   "Land_Mil_WallBig_4m_F",             0,   2],
+    [250,  "Razor Wire Barricade", "Land_Razorwire_F",                  0, 1.5],
     [260,  "Portable Light",       "Land_PortableLight_double_F",     180,   1],
+    [300,  "Junk Barricade (10m)", "Land_Barricade_01_10m_F",           0, 1.5],
     [300,  "Long Concrete Wall",   "Land_CncBarrierMedium4_F",          0,   3],
     [400,  "Large Ramp",           "Land_VR_Slope_01_F",                0,   4],
     [500,  "Bunker Block",         "Land_Bunker_01_blocks_3_F",         0,   2],
@@ -133,13 +138,15 @@ BULWARK_BUILDITEMS = [
     [950,  "Stairs",               "Land_GH_Stairs_F",                180,   4],
     [1000, "Hallogen Lamp",        "Land_LampHalogen_F",               90,   1],
     [1000, "Double H Barrier",     "Land_HBarrierWall4_F",              0,   4],
+    [1000, "H Barrier Wall",       "Base_WarfareBBarrier10x",           0,   4],
     [1000, "Concrete Platform",    "BlockConcrete_F",                   0, 3.5],
     [1200, "Storage box large",    "Box_NATO_AmmoVeh_F",                0,   1],
     [2500, "Static HMG",           "B_HMG_01_high_F",                   0,   1],
     [3000, "Small Bunker",         "Land_BagBunker_Small_F",          180,   3],
     [4500, "Pillbox",              "Land_PillboxBunker_01_hex_F",      90, 2.5],
     [6000, "Guard Tower",          "Land_Cargo_Patrol_V3_F",            0, 3.5],
-    [9500, "Modular Bunker",       "Land_Bunker_01_Small_F",          180, 3.5]
+    [9500, "Modular Bunker",       "Land_Bunker_01_Small_F",          180, 3.5],
+    [10000,"Cargo HQ",             "Land_Cargo_HQ_V2_F",                0, 3.5]
 ];
 
 /* Time of Day*/
