@@ -231,6 +231,7 @@ if (fogWave) then {
 	["Alarm"] remoteExec ["playSound", 0];
 };
 
+swticharooWave = false;
 if (swticharooWave) then {
 	["SpecialWarning",["You were overrun! Take back the bulwark!! Quickly!"]] remoteExec ["BIS_fnc_showNotification", 0];
 	["Alarm"] remoteExec ["playSound", 0];
