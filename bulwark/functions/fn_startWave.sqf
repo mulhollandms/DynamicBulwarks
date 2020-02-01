@@ -86,7 +86,7 @@ SpecialWaveType = "";
 droneCount = 0;
 
 if (specialWave && attkWave >= 5 and attkWave < 10) then {
-	_randWave = floor random 3;
+	_randWave = floor random 2;
 	switch (_randWave) do
 	{
 		case 0:
@@ -97,16 +97,16 @@ if (specialWave && attkWave >= 5 and attkWave < 10) then {
 		{
 			SpecialWaveType = "fogWave";
 		};
-		case 2:
-		{
-			SpecialWaveType = "swticharooWave";
-		};
+		// case 2:
+		// {
+		// 	SpecialWaveType = "swticharooWave";
+		// };
 	};
 	wavesSinceSpecial = 0;
 };
 
 if (specialWave && attkWave >= 10) then {
-	_randWave = floor random 8;
+	_randWave = floor random 7;
 	switch (_randWave) do
 	{
 		case 0:
@@ -117,27 +117,27 @@ if (specialWave && attkWave >= 10) then {
 		{
 			SpecialWaveType = "fogWave";
 		};
+		// case 2:
+		// {
+		// 	SpecialWaveType = "swticharooWave";
+		// };
 		case 2:
-		{
-			SpecialWaveType = "swticharooWave";
-		};
-		case 3:
 		{
 			SpecialWaveType = "suicideWave";
 		};
-		case 4:
+		case 3:
 		{
 			SpecialWaveType = "specMortarWave";
 		};
-		case 5:
+		case 4:
 		{
 			SpecialWaveType = "nightWave";
 		};
-		case 6:
+		case 5:
 		{
 			SpecialWaveType = "demineWave";
 		};
-		case 7:
+		case 6:
 		{
 			SpecialWaveType = "defectorWave";
 		};
@@ -231,7 +231,6 @@ if (fogWave) then {
 	["Alarm"] remoteExec ["playSound", 0];
 };
 
-swticharooWave = false;
 if (swticharooWave) then {
 	["SpecialWarning",["You were overrun! Take back the bulwark!! Quickly!"]] remoteExec ["BIS_fnc_showNotification", 0];
 	["Alarm"] remoteExec ["playSound", 0];
