@@ -143,6 +143,7 @@ BULWARK_BUILDITEMS = [
     [1200, "Storage box large",    "Box_NATO_AmmoVeh_F",                0,   1],
     [2500, "Static HMG",           "B_HMG_01_high_F",                   0,   1],
     [3000, "Small Bunker",         "Land_BagBunker_Small_F",          180,   3],
+    [3000, "D-30 AT",              "CUP_B_D30_AT_CDF",                180,   3],
     [4500, "Pillbox",              "Land_PillboxBunker_01_hex_F",      90, 2.5],
     [6000, "Guard Tower",          "Land_Cargo_Patrol_V3_F",            0, 3.5],
     [9500, "Modular Bunker",       "Land_Bunker_01_Small_F",          180, 3.5],
